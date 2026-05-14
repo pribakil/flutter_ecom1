@@ -1,4 +1,5 @@
 import 'package:ecom1_frontend/controllers/auth_controller.dart';
+import 'package:ecom1_frontend/controllers/navigation_controller.dart';
 import 'package:ecom1_frontend/controllers/theme_controller.dart';
 import 'package:ecom1_frontend/utils/app_themes.dart';
 import 'package:ecom1_frontend/view/splash_screen.dart';
@@ -10,6 +11,7 @@ void main() async {
   await GetStorage.init();
   Get.put(ThemeController());
   Get.put(AuthController());
+  Get.put(NavigationController());
   runApp(const MyApp());
 }
 

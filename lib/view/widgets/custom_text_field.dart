@@ -1,6 +1,5 @@
 import 'package:ecom1_frontend/utils/app_text_styles.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 
 class CustomTextField extends StatefulWidget {
   final String label;
