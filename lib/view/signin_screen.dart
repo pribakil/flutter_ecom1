@@ -2,6 +2,7 @@ import 'package:ecom1_frontend/controllers/auth_controller.dart';
 import 'package:ecom1_frontend/utils/app_text_styles.dart';
 import 'package:ecom1_frontend/view/forgot_password_sreen.dart';
 import 'package:ecom1_frontend/view/main_screen.dart';
+import 'package:ecom1_frontend/view/shopping_screen.dart';
 import 'package:ecom1_frontend/view/signup_screen.dart';
 import 'package:ecom1_frontend/view/widgets/custom_text_field.dart';
 import 'package:flutter/material.dart';
