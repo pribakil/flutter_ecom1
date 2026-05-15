@@ -5,6 +5,7 @@ import 'package:ecom1_frontend/view/widgets/category_chips.dart';
 import 'package:ecom1_frontend/view/widgets/sale_banner.dart';
 import 'package:ecom1_frontend/view/widgets/custom_search_bar.dart';
 import 'package:ecom1_frontend/view/widgets/product_grid.dart';
+import 'package:ecom1_frontend/view/wishlist_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -48,11 +49,11 @@ class HomeScreen extends StatelessWidget {
                   ),
 
                   Spacer(),
+
                   IconButton(
                     onPressed: () {},
                     icon: Icon(Icons.notifications_outlined),
                   ),
-
                   IconButton(
                     onPressed: () => Get.to(() => CartScreen()),
                     icon: Icon(Icons.shopping_bag_outlined),

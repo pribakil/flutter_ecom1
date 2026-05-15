@@ -18,7 +18,7 @@ class CustomBottomNavbar extends StatelessWidget {
             label: "Home",
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.shopping_bag_outlined),
+            icon: Icon(Icons.shopping_cart),
             label: "Shopping",
           ),
           BottomNavigationBarItem(
