@@ -1,14 +1,17 @@
-import 'package:ecom1_frontend/models/product.dart';
-import 'package:ecom1_frontend/utils/app_text_styles.dart';
+import 'package:ecom1_frontend/models/product_model.dart';
+import 'package:ecom1_frontend/repositories/product_repository.dart';
+import 'package:ecom1_frontend/utils/app_text_styles_util.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 class CartScreen extends StatelessWidget {
-  const CartScreen({super.key});
+  final ProductRepository _productRepository = ProductRepository();
+  CartScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
     final isDark = Theme.of(context).brightness == Brightness.dark;
+    final products = _productRepository.getProducts();
     return Scaffold(
       appBar: AppBar(
         leading: IconButton(
@@ -42,7 +45,7 @@ class CartScreen extends StatelessWidget {
     );
   }
 
-  Widget _buildCartItem(BuildContext context, Product product) {
+  Widget _buildCartItem(BuildContext context, ProductModel product) {
     final isDark = Theme.of(context).brightness == Brightness.dark;
 
     return Container(
@@ -159,7 +162,10 @@ class CartScreen extends StatelessWidget {
     );
   }
 
-  void _showDeleteConfirmationDialog(BuildContext context, Product product) {
+  void _showDeleteConfirmationDialog(
+    BuildContext context,
+    ProductModel product,
+  ) {
     final isDark = Theme.of(context).brightness == Brightness.dark;
 
     Get.dialog(

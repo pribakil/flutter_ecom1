@@ -1,6 +1,7 @@
 import 'package:ecom1_frontend/controllers/theme_controller.dart';
 import 'package:ecom1_frontend/view/all_products_screen.dart';
 import 'package:ecom1_frontend/view/cart_screen.dart';
+import 'package:ecom1_frontend/view/notications_screen.dart';
 import 'package:ecom1_frontend/view/widgets/category_chips.dart';
 import 'package:ecom1_frontend/view/widgets/sale_banner.dart';
 import 'package:ecom1_frontend/view/widgets/custom_search_bar.dart';
@@ -51,7 +52,7 @@ class HomeScreen extends StatelessWidget {
                   Spacer(),
 
                   IconButton(
-                    onPressed: () {},
+                    onPressed: () => Get.to(() => NotificationsScreen()),
                     icon: Icon(Icons.notifications_outlined),
                   ),
                   IconButton(
@@ -102,7 +103,7 @@ class HomeScreen extends StatelessWidget {
                 ],
               ),
             ),
-            const Expanded(child: ProductGrid()),
+            Expanded(child: ProductGrid()),
           ],
         ),
       ),

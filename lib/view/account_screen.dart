@@ -1,5 +1,6 @@
 import 'package:ecom1_frontend/controllers/auth_controller.dart';
-import 'package:ecom1_frontend/utils/app_text_styles.dart';
+import 'package:ecom1_frontend/utils/app_text_styles_util.dart';
+import 'package:ecom1_frontend/view/orders_screen.dart';
 import 'package:ecom1_frontend/view/settings_screen.dart';
 import 'package:ecom1_frontend/view/signin_screen.dart';
 import 'package:flutter/material.dart';
@@ -10,7 +11,6 @@ class AccountScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final screenSize = MediaQuery.of(context).size;
     final isDark = Theme.of(context).brightness == Brightness.dark;
 
     return Scaffold(
@@ -146,6 +146,7 @@ class AccountScreen extends StatelessWidget {
                   onTap: () {
                     if (item["title"] == "My Orders") {
                       // navigate to my orders screen
+                      Get.to(() => OrdersScreen());
                     } else if (item["title"] == "Shipping Address") {
                       // navigate to shipping address screen
                     } else if (item["title"] == "Help Center") {

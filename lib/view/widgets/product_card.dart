@@ -1,9 +1,9 @@
-import 'package:ecom1_frontend/models/product.dart';
-import 'package:ecom1_frontend/utils/app_text_styles.dart';
+import 'package:ecom1_frontend/models/product_model.dart';
+import 'package:ecom1_frontend/utils/app_text_styles_util.dart';
 import 'package:flutter/material.dart';
 
 class ProductCard extends StatelessWidget {
-  final Product product;
+  final ProductModel product;
   const ProductCard({super.key, required this.product});
 
   @override

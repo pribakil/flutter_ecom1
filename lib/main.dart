@@ -1,7 +1,7 @@
 import 'package:ecom1_frontend/controllers/auth_controller.dart';
 import 'package:ecom1_frontend/controllers/navigation_controller.dart';
 import 'package:ecom1_frontend/controllers/theme_controller.dart';
-import 'package:ecom1_frontend/utils/app_themes.dart';
+import 'package:ecom1_frontend/utils/app_themes_util.dart';
 import 'package:ecom1_frontend/view/splash_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';

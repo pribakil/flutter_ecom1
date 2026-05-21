@@ -1,4 +1,4 @@
-import 'package:ecom1_frontend/utils/app_text_styles.dart';
+import 'package:ecom1_frontend/utils/app_text_styles_util.dart';
 import 'package:ecom1_frontend/view/widgets/category_chips.dart';
 import 'package:ecom1_frontend/view/widgets/filter_bottom_sheet.dart';
 import 'package:ecom1_frontend/view/widgets/product_grid.dart';
@@ -38,7 +38,7 @@ class ShoppingScreen extends StatelessWidget {
           ),
         ],
       ),
-      body: const Column(
+      body: Column(
         children: [
           Padding(padding: EdgeInsets.only(top: 16), child: CategoryChips()),
           Expanded(child: ProductGrid()),

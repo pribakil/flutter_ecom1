@@ -1,4 +1,4 @@
-import 'package:ecom1_frontend/utils/app_text_styles.dart';
+import 'package:ecom1_frontend/utils/app_text_styles_util.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 

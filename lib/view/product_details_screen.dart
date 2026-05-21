@@ -1,11 +1,11 @@
-import 'package:ecom1_frontend/models/product.dart';
-import 'package:ecom1_frontend/utils/app_text_styles.dart';
+import 'package:ecom1_frontend/models/product_model.dart';
+import 'package:ecom1_frontend/utils/app_text_styles_util.dart';
 import 'package:ecom1_frontend/view/size_selector.dart';
 import 'package:flutter/material.dart';
 import 'package:share_plus/share_plus.dart';
 
 class ProductDetailsScreen extends StatelessWidget {
-  final Product product;
+  final ProductModel product;
   const ProductDetailsScreen({super.key, required this.product});
 
   @override

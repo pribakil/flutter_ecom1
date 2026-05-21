@@ -1,15 +1,19 @@
-import 'package:ecom1_frontend/models/product.dart';
-import 'package:ecom1_frontend/utils/app_text_styles.dart';
+import 'package:ecom1_frontend/models/product_model.dart';
+import 'package:ecom1_frontend/repositories/product_repository.dart';
+import 'package:ecom1_frontend/utils/app_text_styles_util.dart';
 import 'package:ecom1_frontend/view/cart_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 class WishlistScreen extends StatelessWidget {
-  const WishlistScreen({super.key});
+  final ProductRepository _productRepository = ProductRepository();
+
+  WishlistScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
     final isDark = Theme.of(context).brightness == Brightness.dark;
+    final products = _productRepository.getProducts();
 
     return Scaffold(
       backgroundColor: Theme.of(context).scaffoldBackgroundColor,
@@ -64,6 +68,7 @@ class WishlistScreen extends StatelessWidget {
 
   Widget _buildSummarySection(BuildContext context) {
     final isDark = Theme.of(context).brightness == Brightness.dark;
+    final products = _productRepository.getProducts();
     final favoriteProductsLength = products
         .where((product) => product.isFavorite)
         .length;
@@ -115,7 +120,7 @@ class WishlistScreen extends StatelessWidget {
     );
   }
 
-  Widget _buildWishListItem(BuildContext context, Product product) {
+  Widget _buildWishListItem(BuildContext context, ProductModel product) {
     final isDark = Theme.of(context).brightness == Brightness.dark;
 
     return Container(

@@ -1,14 +1,16 @@
-import 'package:ecom1_frontend/models/product.dart';
+import 'package:ecom1_frontend/repositories/product_repository.dart';
 import 'package:ecom1_frontend/view/product_details_screen.dart';
 import 'package:ecom1_frontend/view/widgets/product_card.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 
 class ProductGrid extends StatelessWidget {
-  const ProductGrid({super.key});
+  final ProductRepository _productRepository = ProductRepository();
+
+  ProductGrid({super.key});
 
   @override
   Widget build(BuildContext context) {
+    final products = _productRepository.getProducts();
     return GridView.builder(
       padding: const EdgeInsets.all(16),
       gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(

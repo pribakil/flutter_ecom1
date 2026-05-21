@@ -1,4 +1,4 @@
-import 'package:ecom1_frontend/utils/app_text_styles.dart';
+import 'package:ecom1_frontend/utils/app_text_styles_util.dart';
 import 'package:ecom1_frontend/view/widgets/filter_bottom_sheet.dart';
 import 'package:ecom1_frontend/view/widgets/product_grid.dart';
 import 'package:flutter/material.dart';
@@ -44,7 +44,7 @@ class AllProductsScreen extends StatelessWidget {
           ),
         ],
       ),
-      body: const ProductGrid(),
+      body: ProductGrid(),
     );
   }
 }
