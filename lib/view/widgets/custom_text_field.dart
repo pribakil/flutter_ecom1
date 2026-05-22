@@ -47,7 +47,7 @@ class _CustomTextFieldState extends State<CustomTextField> {
         ),
         prefixIcon: Icon(
           widget.prefixIcon,
-          color: isDark ? Colors.grey[400]! : Colors.grey[600]!,
+          color: Theme.of(context).primaryColor,
         ),
         suffixIcon: widget.isPassword
             ? IconButton(

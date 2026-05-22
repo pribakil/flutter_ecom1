@@ -2,6 +2,7 @@ import 'package:ecom1_frontend/controllers/auth_controller.dart';
 import 'package:ecom1_frontend/utils/app_text_styles_util.dart';
 import 'package:ecom1_frontend/view/orders_screen.dart';
 import 'package:ecom1_frontend/view/settings_screen.dart';
+import 'package:ecom1_frontend/view/shipping_address_screen.dart';
 import 'package:ecom1_frontend/view/signin_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -149,6 +150,7 @@ class AccountScreen extends StatelessWidget {
                       Get.to(() => OrdersScreen());
                     } else if (item["title"] == "Shipping Address") {
                       // navigate to shipping address screen
+                      Get.to(() => ShippingAddressScreen());
                     } else if (item["title"] == "Help Center") {
                       // navigate to help center screen
                     } else if (item["title"] == "Logout") {

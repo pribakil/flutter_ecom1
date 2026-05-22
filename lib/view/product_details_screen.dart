@@ -117,7 +117,7 @@ class ProductDetailsScreen extends StatelessWidget {
                     ),
                   ),
                   SizedBox(height: screenHeight * 0.01),
-                  SizeSelector(),
+                  ValueSelector(values: ["S", "M", "L", "XL", "XXL"]),
                   SizedBox(height: screenHeight * 0.02),
                   Text(
                     "Description",
